@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Counter App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Counter App</h1>
+  
+  <div>
+    <h2 id="counter">0</h2>
+
+    <button id="increase">Increase</button>
+    <button id="decrease">Decrease</button>
+    <button id="reset">Reset</button>
+  </div>
+
+  <script>
+     
+    const counterDisplay = document.getElementById("counter");
+    const increaseBtn = document.getElementById("increase");
+    const decreaseBtn = document.getElementById("decrease");
+    const resetBtn = document.getElementById("reset");
+
+    let count = 0;
+
+    increaseBtn.addEventListener("click", function() {
+      count++;
+      counterDisplay.textContent = count;
+    });
+
+    decreaseBtn.addEventListener("click", function() {
+      count--;
+      counterDisplay.textContent = count;
+    });
+
+    
+    resetBtn.addEventListener("click", function() {
+      count = 0;
+      counterDisplay.textContent = count;
+    });
+  </script>
+
+</body>
+</html>
