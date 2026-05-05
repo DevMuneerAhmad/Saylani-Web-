@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coin Toss App</title>
+    <link rel="stylesheet" href="cointossapp.css">
+</head>
+<body>
+<div>
+
+    <h1>Coin Toss</h1>
+    
+    <button onclick="tossCoin()">Toss Coin</button>
+    
+    <p id="result"></p>
+</div>
+
+    <script>
+        function tossCoin() {
+            let randomNumber = Math.random();
+
+            if (randomNumber < 0.5) {
+                document.getElementById("result").innerText = "Head";
+            } else {
+                document.getElementById("result").innerText = "Tail";
+            }
+        }
+    </script>
+
+</body>
+</html>
